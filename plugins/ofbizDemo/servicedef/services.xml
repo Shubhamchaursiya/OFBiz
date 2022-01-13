@@ -23,9 +23,9 @@ under the License.
     <description>OfbizDemo Services</description>
     <vendor></vendor>
     <version>1.0</version>
-    <service name="createOfbizDemoByGroovyService" default-entity-name="OfbizDemo" engine="groovy"
-             location="component://ofbizDemo/groovyScripts/OfbizDemoServices.groovy" invoke="createOfbizDemo" auth="true">
-        <description>Create an Ofbiz Demo record using a service in Groovy</description>
+
+    <service name="createOfbizDemo" default-entity-name="OfbizDemo" engine="entity-auto" invoke="create" auth="true">
+        <description>Create an Ofbiz Demo record</description>
         <auto-attributes include="pk" mode="OUT" optional="false"/>
         <auto-attributes include="nonpk" mode="IN" optional="false"/>
         <override name="comments" optional="true"/>
