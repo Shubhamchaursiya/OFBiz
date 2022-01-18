@@ -46,13 +46,21 @@ under the License.
         <param-value>false</param-value>
     </context-param>
 
+    <context-param>
+        <description>The location of the main-decorator screen to use for this webapp; referred to as a context variable in screen def XML files.</description>
+        <param-name>mainDecoratorLocation</param-name>
+        <param-value>component://ofbizDemo/widget/CommonScreens.xml</param-value>
+
+    </context-param>
+
+
     <filter>
         <display-name>ControlFilter</display-name>
         <filter-name>ControlFilter</filter-name>
         <filter-class>org.apache.ofbiz.webapp.control.ControlFilter</filter-class>
         <init-param>
             <param-name>allowedPaths</param-name>
-            <param-value>/error:/control:/select:/index.html:/index.jsp:/default.html:/default.jsp:/images</param-value>
+            <param-value>/error:/control:/select:/index.html:/index.jsp:/default.html:/default.jsp:/images:/includes/maincss.css:/css:/js</param-value>
         </init-param>
         <init-param><param-name>redirectPath</param-name><param-value>/control/main</param-value></init-param>
     </filter>
@@ -93,4 +101,6 @@ under the License.
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
     </welcome-file-list>
+
+
 </web-app>
